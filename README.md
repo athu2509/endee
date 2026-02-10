@@ -44,26 +44,56 @@ User Question → Embedding Model → Vector Search (Endee) → Retrieve Chunks 
 ## 🚀 Quick Start
 
 ### 1. Start Endee Vector Database
+
+**macOS/Linux:**
 ```bash
 cd endee
 ./install.sh  # First time only
 ./run.sh      # Starts server on port 8080
 ```
 
-### 2. Install & Start Ollama
-```bash
-# macOS
-brew install ollama
+**Windows:**
+```cmd
+cd endee
+install.bat   # First time only (or follow manual build instructions)
+run.bat       # Starts server on port 8080
+```
 
-# Start Ollama
+### 2. Install & Start Ollama
+
+**macOS:**
+```bash
+brew install ollama
+```
+
+**Linux:**
+```bash
+curl -fsSL https://ollama.ai/install.sh | sh
+```
+
+**Windows:**
+Download from https://ollama.ai and install
+
+**Start Ollama (all platforms):**
+```bash
+# Terminal 1
 ollama serve
 
-# Pull a model (new terminal)
+# Terminal 2
 ollama pull llama3.2
 ```
 
 ### 3. Run RAG Application
+
+**macOS/Linux:**
 ```bash
+cd python_rag_streamlit
+pip install -r requirements.txt
+streamlit run rag_app.py
+```
+
+**Windows:**
+```cmd
 cd python_rag_streamlit
 pip install -r requirements.txt
 streamlit run rag_app.py
@@ -93,19 +123,48 @@ ollama pull phi3       # Very small (2GB)
 ## 🐛 Troubleshooting
 
 **"Endee is not running"**
+
+*macOS/Linux:*
 ```bash
 cd endee && ./run.sh
 ```
 
+*Windows:*
+```cmd
+cd endee && run.bat
+```
+
 **"Ollama not reachable"**
+
+*All platforms:*
 ```bash
 ollama serve
 ```
 
 **Verify database:**
+
+*macOS/Linux:*
 ```bash
 cd python_rag_streamlit
 python check_endee.py
+```
+
+*Windows:*
+```cmd
+cd python_rag_streamlit
+python check_endee.py
+```
+
+**Virtual environment activation:**
+
+*macOS/Linux:*
+```bash
+source .venv/bin/activate
+```
+
+*Windows:*
+```cmd
+.venv\Scripts\activate
 ```
 
 ## 📊 Performance

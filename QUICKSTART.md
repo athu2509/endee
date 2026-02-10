@@ -2,9 +2,16 @@
 
 ## Step 1: Start Endee (30 seconds)
 
+**macOS/Linux:**
 ```bash
 cd endee
 ./run.sh
+```
+
+**Windows:**
+```cmd
+cd endee
+run.bat
 ```
 
 ✅ You should see: `Crow/master server is running at http://0.0.0.0:8080`
@@ -15,12 +22,17 @@ cd endee
 
 ## Step 2: Start Ollama (30 seconds)
 
-**New terminal:**
+**Install Ollama:**
+- **macOS:** `brew install ollama`
+- **Linux:** `curl -fsSL https://ollama.ai/install.sh | sh`
+- **Windows:** Download from https://ollama.ai
+
+**Start Ollama (new terminal):**
 ```bash
 ollama serve
 ```
 
-**Another new terminal:**
+**Pull a model (another new terminal):**
 ```bash
 ollama pull llama3.2
 ```
@@ -32,7 +44,15 @@ ollama pull llama3.2
 ## Step 3: Install Python Dependencies (1 minute)
 
 **New terminal:**
+
+**macOS/Linux:**
 ```bash
+cd python_rag_streamlit
+pip install -r requirements.txt
+```
+
+**Windows:**
+```cmd
 cd python_rag_streamlit
 pip install -r requirements.txt
 ```
@@ -41,7 +61,13 @@ pip install -r requirements.txt
 
 ## Step 4: Run the App (30 seconds)
 
+**macOS/Linux:**
 ```bash
+streamlit run rag_app.py
+```
+
+**Windows:**
+```cmd
 streamlit run rag_app.py
 ```
 
@@ -96,8 +122,15 @@ If you uploaded research papers:
 ## 🐛 Quick Troubleshooting
 
 **"Endee is not running"**
+
+*macOS/Linux:*
 ```bash
 cd endee && ./run.sh
+```
+
+*Windows:*
+```cmd
+cd endee && run.bat
 ```
 
 **"Ollama not reachable"**
