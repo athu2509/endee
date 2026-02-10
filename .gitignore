@@ -23,3 +23,20 @@ frontend/*
 
 # DS Store
 .DS_Store
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+*.pyc
+__pycache__/
+
+# Python cache and compiled files
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+dist/
+*.egg-info/
